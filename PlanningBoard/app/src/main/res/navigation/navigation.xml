@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/landingPage">
+    <fragment
+        android:id="@+id/landingPage"
+        android:name="uk.ac.abertay.planningboard.LandingPage"
+        android:label="LandingPage" />
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="uk.ac.abertay.planningboard.NoteFragment"
+        android:label="NoteFragment" />
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="uk.ac.abertay.planningboard.loginPage"
+        android:label="loginPage" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="uk.ac.abertay.planningboard.SignUpFragment"
+        android:label="SignUpFragment" />
+</navigation>

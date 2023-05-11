@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PlanningBoard</string>
+    <string name="loadingtext">Loading...</string>
+    <string name="addnew">Add New Note</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notes">Notes</string>
+    <string name="calendar">Calendar</string>
+    <string name="goals">Goals</string>
+    <string name="todo">Todo</string>
+    <string name="weclomeText">Welcome to Planning Board!</string>
+    <string name="usernameText">PlaceHolder</string>
+    <string name="inspirQuote">Inspiration Quote Something Something</string>
+    <string name="numTodoLeft">Todo\'s To Finish</string>
+    <string name="numGoalsLeft">Goals To Finish</string>
+    <string name="numTodoLeftNumber" >0</string>
+    <string name="numGoalLeftNumber">0</string>
+    <string name="genQuoteText">Generate New Quote</string>
+    <string name="gotoTodoButton">Todo List</string>
+    <string name="gotoGoalsButton" >Goals</string>
+    <string name="loginText">Please Login to continue</string>
+    <string name="UsernameHint">Email Address</string>
+    <string name="PasswordHint">Password</string>
+    <string name="loginButton">Login</string>
+    <string name="loginWithGoogleButton">Login with Google</string>
+    <string name="signUpButton">no Account? Signup!</string>
+    <string name="nameHint">Username</string>
+    <string name="signUpDetails">Please add the following information below to create your account!</string>
+    <string name="createAccountText">Create Account</string>
+    <string name="SignupGoogle">Sign up Using Google!</string>
+</resources>
