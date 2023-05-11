@@ -6,11 +6,14 @@
     <fragment
         android:id="@+id/landingPage"
         android:name="uk.ac.abertay.planningboard.LandingPage"
-        android:label="LandingPage" />
-    <fragment
-        android:id="@+id/noteFragment"
-        android:name="uk.ac.abertay.planningboard.NoteFragment"
-        android:label="NoteFragment" />
+        android:label="LandingPage" >
+        <action
+            android:id="@+id/action_landingPage_to_todoFragment"
+            app:destination="@id/todoFragment" />
+        <action
+            android:id="@+id/action_landingPage_to_goalsFragment"
+            app:destination="@id/goalsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginPage"
         android:name="uk.ac.abertay.planningboard.loginPage"
@@ -19,4 +22,12 @@
         android:id="@+id/signUpFragment"
         android:name="uk.ac.abertay.planningboard.SignUpFragment"
         android:label="SignUpFragment" />
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="uk.ac.abertay.planningboard.TodoFragment"
+        android:label="TodoFragment" />
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="uk.ac.abertay.planningboard.GoalsFragment"
+        android:label="GoalsFragment" />
 </navigation>

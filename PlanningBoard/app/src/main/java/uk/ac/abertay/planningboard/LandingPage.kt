@@ -15,6 +15,7 @@ class LandingPage : Fragment() {
     ): View? { val binding: LandingFragmentBinding = DataBindingUtil.inflate(
         inflater, R.layout.landing_fragment, container, false
     )
+
         return binding.root
     }
 
