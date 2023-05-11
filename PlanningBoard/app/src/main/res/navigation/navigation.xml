@@ -9,7 +9,8 @@
         android:label="LandingPage" >
         <action
             android:id="@+id/action_landingPage_to_todoFragment"
-            app:destination="@id/todoFragment" />
+            app:destination="@id/todoFragment"
+            app:launchSingleTop="false" />
         <action
             android:id="@+id/action_landingPage_to_goalsFragment"
             app:destination="@id/goalsFragment" />
