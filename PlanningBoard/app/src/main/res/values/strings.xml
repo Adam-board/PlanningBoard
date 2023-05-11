@@ -27,4 +27,7 @@
     <string name="signUpDetails">Please add the following information below to create your account!</string>
     <string name="createAccountText">Create Account</string>
     <string name="SignupGoogle">Sign up Using Google!</string>
+    <string name="CalendarText">Please select the date you want</string>
+    <string name="ConfirmDate">Confirm</string>
+    <string name="AddGoal">Click To Add Goal</string>
 </resources>
