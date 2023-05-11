@@ -30,4 +30,5 @@
     <string name="CalendarText">Please select the date you want</string>
     <string name="ConfirmDate">Confirm</string>
     <string name="AddGoal">Click To Add Goal</string>
+    <string name="AddTodo">Click To Add Todo</string>
 </resources>
