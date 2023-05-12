@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/calendar" />
-    <item android:title="@string/goals" />
-    <item android:title="@string/todo" />
-    <item android:title="@string/notes" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/CalendarNavLink"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="@string/calendar" />
+    <item
+        android:id="@+id/NotesNavLink"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/notes" />
+    <item
+        android:icon="@android:drawable/btn_star"
+        android:id="@+id/GoalsNavLink"
+        android:title="@string/goals"/>
+    <item
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:id="@+id/TodoNavLink"
+        android:title="@string/todo"/>
+    <item
+        android:id="@+id/SettingsNavLink"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/settings" />
 </menu>
