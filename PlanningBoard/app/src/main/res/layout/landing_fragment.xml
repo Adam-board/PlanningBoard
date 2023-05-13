@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+
+        <variable
+            name="LandingViewModel"
+            type="uk.ac.abertay.planningboard.LandingViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -37,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{@string/quote_format(@string/loadingtext)}"
+            android:text="@{@string/quote_format(LandingViewModel.quote)}"
             android:textSize="@dimen/quoteText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,6 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/genQuoteText"
+            android:onClick="@{() -> LandingViewModel.nextQuote()}"
             app:layout_constraintBottom_toTopOf="@+id/NumTodoLeftText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -130,16 +138,6 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/gotoTodo"
             app:layout_constraintTop_toBottomOf="@+id/numGoalsLeftNumber" />
-
-        <TextView
-            android:id="@+id/Author"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Author"
-            app:layout_constraintBottom_toTopOf="@+id/GenQuote"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Quote" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

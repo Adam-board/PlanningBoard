@@ -8,20 +8,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import uk.ac.abertay.planningboard.databinding.LandingFragmentBinding
 
 class LandingPage : Fragment() {
 
-    private val viewModel: LandingViewModel by viewModels()
+    private lateinit var viewModel: LandingViewModel
+    private lateinit var binding: LandingFragmentBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? { val binding: LandingFragmentBinding = DataBindingUtil.inflate(
+    ): View? { binding = DataBindingUtil.inflate(
         inflater, R.layout.landing_fragment, container, false
     )
-        binding.lifecycleOwner = this
+
+        viewModel = ViewModelProvider(this).get(LandingViewModel::class.java)
+        binding.landingViewModel = viewModel
+        binding.setLifecycleOwner (this)
+
 
         binding.gotoGoals.setOnClickListener{view :View->
         view.findNavController().navigate(R.id.action_landingPage_to_goalsFragment)
