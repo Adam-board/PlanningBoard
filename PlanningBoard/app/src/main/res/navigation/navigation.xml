@@ -31,4 +31,16 @@
         android:id="@+id/goalsFragment"
         android:name="uk.ac.abertay.planningboard.GoalsFragment"
         android:label="GoalsFragment" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="uk.ac.abertay.planningboard.CalendarFragment"
+        android:label="CalendarFragment" />
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="uk.ac.abertay.planningboard.NoteFragment"
+        android:label="NoteFragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="uk.ac.abertay.planningboard.MainActivity"
+        android:label="MainActivity" />
 </navigation>

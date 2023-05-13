@@ -9,7 +9,7 @@
     <string name="todo">Todo</string>
     <string name="weclomeText">Welcome to Planning Board!</string>
     <string name="usernameText">PlaceHolder</string>
-    <string name="inspirQuote">Inspiration Quote Something Something</string>
+    <string name="inspirQuote">Loading Quote of the Day</string>
     <string name="numTodoLeft">Todo\'s To Finish</string>
     <string name="numGoalsLeft">Goals To Finish</string>
     <string name="numTodoLeftNumber" >0</string>
@@ -40,4 +40,7 @@
     <string name="daily_todo_s">Daily Todo\'s</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="home">Home</string>
+    <string name="quote_format">\"%s\"</string>
+    <string name="Author">Author</string>
 </resources>

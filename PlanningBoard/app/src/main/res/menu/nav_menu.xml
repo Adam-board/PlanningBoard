@@ -4,23 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <item
-        android:id="@+id/CalendarNavLink"
+        android:id="@+id/mainActivity"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/calendarFragment"
         android:icon="@android:drawable/ic_menu_my_calendar"
         android:title="@string/calendar" />
     <item
-        android:id="@+id/NotesNavLink"
+        android:id="@+id/noteFragment"
         android:icon="@android:drawable/ic_menu_edit"
         android:title="@string/notes" />
     <item
         android:icon="@android:drawable/btn_star"
-        android:id="@+id/GoalsNavLink"
+        android:id="@+id/goalsFragment"
         android:title="@string/goals"/>
     <item
         android:icon="@android:drawable/ic_menu_agenda"
-        android:id="@+id/TodoNavLink"
+        android:id="@+id/todoFragment"
         android:title="@string/todo"/>
     <item
-        android:id="@+id/SettingsNavLink"
+        android:id="@+id/Settings"
         android:icon="@android:drawable/ic_menu_manage"
         android:title="@string/settings" />
 </menu>

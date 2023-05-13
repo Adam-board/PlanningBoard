@@ -33,11 +33,11 @@
             app:layout_constraintTop_toBottomOf="@+id/WelcomeText" />
 
         <TextView
-            android:id="@+id/InspireQuote"
+            android:id="@+id/Quote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/inspirQuote"
+            android:text="@{@string/quote_format(@string/loadingtext)}"
             android:textSize="@dimen/quoteText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
             app:layout_constraintEnd_toStartOf="@+id/numGoalsLeftText"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/InspireQuote" />
+            app:layout_constraintTop_toBottomOf="@+id/Quote" />
 
         <TextView
             android:id="@+id/numGoalsLeftText"
@@ -69,7 +69,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/NumTodoLeftText"
-            app:layout_constraintTop_toBottomOf="@+id/InspireQuote" />
+            app:layout_constraintTop_toBottomOf="@+id/Quote" />
 
         <TextView
             android:id="@+id/numTodoLeftNumber"
@@ -105,7 +105,7 @@
             app:layout_constraintBottom_toTopOf="@+id/NumTodoLeftText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/InspireQuote" />
+            app:layout_constraintTop_toBottomOf="@+id/Quote" />
 
         <Button
             android:id="@+id/gotoTodo"
@@ -130,6 +130,16 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/gotoTodo"
             app:layout_constraintTop_toBottomOf="@+id/numGoalsLeftNumber" />
+
+        <TextView
+            android:id="@+id/Author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Author"
+            app:layout_constraintBottom_toTopOf="@+id/GenQuote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Quote" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
