@@ -12,8 +12,8 @@
             app:destination="@id/todoFragment"
             app:launchSingleTop="false" />
         <action
-            android:id="@+id/action_landingPage_to_goalsFragment"
-            app:destination="@id/goalsFragment" />
+            android:id="@+id/action_landingPage_to_noteFragment"
+            app:destination="@id/noteFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginPage"
@@ -27,10 +27,6 @@
         android:id="@+id/todoFragment"
         android:name="uk.ac.abertay.planningboard.TodoFragment"
         android:label="TodoFragment" />
-    <fragment
-        android:id="@+id/goalsFragment"
-        android:name="uk.ac.abertay.planningboard.GoalsFragment"
-        android:label="GoalsFragment" />
     <fragment
         android:id="@+id/calendarFragment"
         android:name="uk.ac.abertay.planningboard.CalendarFragment"

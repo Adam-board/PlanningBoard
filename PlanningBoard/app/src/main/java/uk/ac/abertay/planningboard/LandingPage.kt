@@ -29,9 +29,8 @@ class LandingPage : Fragment() {
         binding.landingViewModel = viewModel
         binding.setLifecycleOwner (this)
 
-
-        binding.gotoGoals.setOnClickListener{view :View->
-        view.findNavController().navigate(R.id.action_landingPage_to_goalsFragment)
+        binding.gotoNotes.setOnClickListener{view :View->
+        view.findNavController().navigate(R.id.action_landingPage_to_noteFragment)
         }
         binding.gotoTodo.setOnClickListener{view:View ->
         view.findNavController().navigate(R.id.action_landingPage_to_todoFragment)

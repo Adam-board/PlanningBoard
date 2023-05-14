@@ -9,6 +9,10 @@
         <variable
             name="LandingViewModel"
             type="uk.ac.abertay.planningboard.LandingViewModel" />
+
+        <variable
+        name="NoteViewModel"
+        type="uk.ac.abertay.planningboard.NoteViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -59,19 +63,19 @@
             android:layout_marginBottom="32dp"
             android:text="@string/numTodoLeft"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/numGoalsLeftText"
+            app:layout_constraintEnd_toStartOf="@+id/NotesCreated"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Quote" />
 
         <TextView
-            android:id="@+id/numGoalsLeftText"
+            android:id="@+id/NotesCreated"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="32dp"
-            android:text="@string/numGoalsLeft"
+            android:text="@string/NotesCreated"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -82,12 +86,11 @@
             android:id="@+id/numTodoLeftNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="@string/numTodoLeftNumber"
+            android:text="0"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/numGoalsLeftNumber"
+            app:layout_constraintEnd_toEndOf="@+id/NumTodoLeftText"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/NumTodoLeftText"
             app:layout_constraintTop_toBottomOf="@+id/NumTodoLeftText"
             app:layout_constraintVertical_bias="0.100000024" />
 
@@ -95,48 +98,47 @@
             android:id="@+id/numGoalsLeftNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:text="@string/numGoalLeftNumber"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/NotesCreated"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/numTodoLeftNumber"
-            app:layout_constraintTop_toBottomOf="@+id/numGoalsLeftText"
+            app:layout_constraintStart_toStartOf="@+id/NotesCreated"
+            app:layout_constraintTop_toBottomOf="@+id/NotesCreated"
             app:layout_constraintVertical_bias="0.100000024" />
 
         <Button
             android:id="@+id/GenQuote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/genQuoteText"
             android:onClick="@{() -> LandingViewModel.nextQuote()}"
+            android:text="@string/genQuoteText"
             app:layout_constraintBottom_toTopOf="@+id/NumTodoLeftText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Quote" />
+            app:layout_constraintTop_toBottomOf="@+id/UsernameText" />
 
         <Button
             android:id="@+id/gotoTodo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:text="@string/gotoTodoButton"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/gotoGoals"
+            app:layout_constraintEnd_toEndOf="@+id/NumTodoLeftText"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/numTodoLeftNumber" />
+            app:layout_constraintStart_toStartOf="@+id/NumTodoLeftText"
+            app:layout_constraintTop_toBottomOf="@+id/numTodoLeftNumber"
+            app:layout_constraintVertical_bias="0.505" />
 
         <Button
-            android:id="@+id/gotoGoals"
+            android:id="@+id/gotoNotes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="@string/gotoGoalsButton"
+            android:text="@string/gotoNotesButton"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/NotesCreated"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/gotoTodo"
+            app:layout_constraintStart_toStartOf="@+id/NotesCreated"
             app:layout_constraintTop_toBottomOf="@+id/numGoalsLeftNumber" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

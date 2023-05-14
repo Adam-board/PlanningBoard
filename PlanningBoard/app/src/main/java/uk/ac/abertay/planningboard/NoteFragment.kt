@@ -162,7 +162,7 @@ class NoteFragment: Fragment(), NotesAdapter.NotesClickListener, PopupMenu.OnMen
 
     private fun onShare(note: Note) {
         val shareIntent = ShareCompat.IntentBuilder.from(requireActivity())
-            .setText("Here's my note about {note.title} have a read of the body: {note.note}")
+            .setText(getString(R.string.shareFeatureText, selectedNote.title, selectedNote.note))
             .setType("text/plain")
             .intent
 
