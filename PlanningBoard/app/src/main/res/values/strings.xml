@@ -12,11 +12,11 @@
     <string name="inspirQuote">Loading Quote of the Day</string>
     <string name="numTodoLeft">Todo\'s To Finish</string>
     <string name="numGoalsLeft">Goals To Finish</string>
-    <string name="numTodoLeftNumber" >0</string>
+    <string name="numTodoLeftNumber">0</string>
     <string name="numGoalLeftNumber">0</string>
     <string name="genQuoteText">Generate New Quote</string>
     <string name="gotoTodoButton">Todo List</string>
-    <string name="gotoGoalsButton" >Goals</string>
+    <string name="gotoGoalsButton">Goals</string>
     <string name="loginText">Please Login to continue</string>
     <string name="UsernameHint">Email Address</string>
     <string name="PasswordHint">Password</string>
@@ -43,4 +43,6 @@
     <string name="home">Home</string>
     <string name="quote_format">\"%s\"</string>
     <string name="Author">Author</string>
+    <string name="SearchText">Search</string>
+    <string name="sharing_not_available">Sorry, You cannot share currently</string>
 </resources>
