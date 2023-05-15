@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1003938200708",
+    "project_id": "planning-board-f2953",
+    "storage_bucket": "planning-board-f2953.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003938200708:android:4de28c35f55177d3ced6d1",
+        "android_client_info": {
+          "package_name": "uk.ac.abertay.planningboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003938200708-33nmhuqhiffppm4ugvs8rq292diu8hhn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uk.ac.abertay.planningboard",
+            "certificate_hash": "8027693111f9be51aacdf7c42082ce4267449b4f"
+          }
+        },
+        {
+          "client_id": "1003938200708-mgd0rnip8binv06o83ao1jp7j002n820.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY6OfpTP0YXJXTWfXL2pd6Q_NPS3PbnRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003938200708-mgd0rnip8binv06o83ao1jp7j002n820.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

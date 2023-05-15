@@ -54,24 +54,13 @@
             android:id="@+id/LoginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
             android:text="@string/loginButton"
-            app:layout_constraintBottom_toTopOf="@+id/loginWithGoogle"
+            app:layout_constraintBottom_toTopOf="@+id/GoogleLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
-
-        <Button
-            android:id="@+id/loginWithGoogle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/loginWithGoogleButton"
-            app:layout_constraintBottom_toTopOf="@+id/TwitterLogin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
             android:id="@+id/SignupButton"
@@ -81,18 +70,20 @@
             android:text="@string/signUpButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GoogleLogin" />
 
         <Button
-            android:id="@+id/TwitterLogin"
+            android:id="@+id/GoogleLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login_with_twitter"
+            android:text="@string/loginWithGoogleButton"
             app:layout_constraintBottom_toTopOf="@+id/SignupButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginWithGoogle" />
+            app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
