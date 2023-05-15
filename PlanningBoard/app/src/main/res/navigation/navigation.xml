@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_landingPage_to_calendarFragment"
             app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_landingPage_to_loginPage"
+            app:destination="@id/loginPage" />
     </fragment>
     <fragment
         android:id="@+id/loginPage"
@@ -29,15 +32,27 @@
     <fragment
         android:id="@+id/todoFragment"
         android:name="uk.ac.abertay.planningboard.TodoFragment"
-        android:label="TodoFragment" />
+        android:label="TodoFragment" >
+        <action
+            android:id="@+id/action_todoFragment_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
     <fragment
         android:id="@+id/calendarFragment"
         android:name="uk.ac.abertay.planningboard.CalendarFragment"
-        android:label="CalendarFragment" />
+        android:label="CalendarFragment" >
+        <action
+            android:id="@+id/action_calendarFragment_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
     <fragment
         android:id="@+id/noteFragment"
         android:name="uk.ac.abertay.planningboard.NoteFragment"
-        android:label="NoteFragment" />
+        android:label="NoteFragment" >
+        <action
+            android:id="@+id/action_noteFragment_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
     <activity
         android:id="@+id/mainActivity"
         android:name="uk.ac.abertay.planningboard.MainActivity"
@@ -46,4 +61,12 @@
         android:id="@+id/signUpActivity"
         android:name="uk.ac.abertay.planningboard.SignUpActivity"
         android:label="SignUpActivity" />
+    <fragment
+        android:id="@+id/logoutFunctionality"
+        android:name="uk.ac.abertay.planningboard.logoutFunctionality"
+        android:label="logoutFunctionality" >
+        <action
+            android:id="@+id/action_logoutFunctionality_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
 </navigation>

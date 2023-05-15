@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import timber.log.Timber
 import uk.ac.abertay.planningboard.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +33,39 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return NavigationUI.navigateUp(navController, drawerLayout)
+    }
+
+
+
+
+    override fun onStart() {
+        super.onStart()
+        Timber.i( "onStart called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.i( "onResume called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i( "onPause called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i( "onDestroy called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i( "onRestart called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i( "onStop called")
     }
 
     }

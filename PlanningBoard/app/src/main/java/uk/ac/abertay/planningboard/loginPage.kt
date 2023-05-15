@@ -12,8 +12,21 @@ import androidx.navigation.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import uk.ac.abertay.planningboard.databinding.LandingFragmentBinding
 import uk.ac.abertay.planningboard.databinding.LoginFragmentBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 
 class loginPage: Fragment() {
+
+
+    private val RC_SIGN_IN = 123
+
+    val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        .requestEmail()
+        .build()
+
 
 
     private lateinit var binding: LoginFragmentBinding
@@ -34,6 +47,15 @@ class loginPage: Fragment() {
             startActivity(intent)
         }
 
+        val googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+
+        binding.loginWithGoogle.setOnClickListener {
+
+            val signInIntent = googleSignInClient.signInIntent
+            startActivityForResult(signInIntent, RC_SIGN_IN)
+
+        }
+
         binding.LoginButton.setOnClickListener {view: View ->
             val emailAddressSignup = binding.editTextEmail.text.toString()
             val pass = binding.editTextPassword.text.toString()
@@ -42,14 +64,9 @@ class loginPage: Fragment() {
 
                     firebaseAuth.signInWithEmailAndPassword(emailAddressSignup, pass).addOnCompleteListener{
                         if (it.isSuccessful){
-
                             view.findNavController().navigate(R.id.action_loginPage_to_landingPage)
-                        }else{
-
                         }
                     }
-
-
             }else{
                 Toast.makeText(requireActivity(), "Empty fields are NOT allowed!" , Toast.LENGTH_SHORT).show()
             }
@@ -59,7 +76,29 @@ class loginPage: Fragment() {
         return binding.root
     }
 
+    private fun checkLoggedIn(){
+        if(firebaseAuth.currentUser != null) {
 
+            view?.findNavController()?.navigate(R.id.action_loginPage_to_landingPage)
 
+        }
+    }
 
+    override fun onStart() {
+        super.onStart()
+        checkLoggedIn()
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == RC_SIGN_IN) {
+            val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                val account = task.getResult(ApiException::class.java)
+                // Handle successful sign-in
+            } catch (e: ApiException) {
+                // Handle sign-in failure
+            }
+        }
+    }
 }

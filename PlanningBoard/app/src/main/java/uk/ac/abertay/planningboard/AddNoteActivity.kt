@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import timber.log.Timber
 import uk.ac.abertay.planningboard.databinding.ActivityAddNoteBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -75,4 +76,36 @@ class AddNoteActivity : AppCompatActivity() {
             onBackPressed()
         }
     }
+
+    override fun onStart() {
+        super.onStart()
+        Timber.i( "onStart called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.i( "onResume called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i( "onPause called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i( "onDestroy called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i( "onRestart called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i( "onStop called")
+    }
+
+
 }

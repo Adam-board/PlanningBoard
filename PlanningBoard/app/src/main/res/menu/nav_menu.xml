@@ -21,5 +21,6 @@
         android:title="@string/todo"/>
     <item
         android:icon="@drawable/baseline_exit_to_app_24"
+        android:id="@+id/logoutFunctionality"
         android:title="@string/logout" />
 </menu>

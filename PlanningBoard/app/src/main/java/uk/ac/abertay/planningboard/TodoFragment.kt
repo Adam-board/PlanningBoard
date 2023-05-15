@@ -18,12 +18,15 @@ import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import uk.ac.abertay.planningboard.databinding.TodoFragmentBinding
 
 class TodoFragment: Fragment(), TodoAdapter.TodoClickListener, PopupMenu.OnMenuItemClickListener
 {
 
+    private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var binding : TodoFragmentBinding
     private lateinit var database: TodoDatabase
     lateinit var viewModel: TodoViewModel
@@ -49,6 +52,7 @@ class TodoFragment: Fragment(), TodoAdapter.TodoClickListener, PopupMenu.OnMenuI
         inflater, R.layout.todo_fragment, container, false
     )
 
+        firebaseAuth = FirebaseAuth.getInstance()
         initUI()
 
         viewModel = ViewModelProvider(this,
@@ -153,6 +157,11 @@ class TodoFragment: Fragment(), TodoAdapter.TodoClickListener, PopupMenu.OnMenuI
         return false
     }
 
+    override fun onStart() {
+        super.onStart()
+        checkLoggedIn()
+    }
+
     private fun onShare(todo: Todo) {
         val shareIntent = ShareCompat.IntentBuilder.from(requireActivity())
             .setText(getString(R.string.shareFeatureTextTodo, selectedTodo.title, selectedTodo.todo))
@@ -167,4 +176,10 @@ class TodoFragment: Fragment(), TodoAdapter.TodoClickListener, PopupMenu.OnMenuI
         }
     }
 
+    private fun checkLoggedIn(){
+        if(firebaseAuth.currentUser == null) {
+
+            view?.findNavController()?.navigate(R.id.action_todoFragment_to_loginPage)
+        }
+    }
 }

@@ -21,7 +21,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import uk.ac.abertay.planningboard.databinding.NoteFragmentBinding
 
 
@@ -30,7 +32,7 @@ import uk.ac.abertay.planningboard.databinding.NoteFragmentBinding
  */
 class NoteFragment: Fragment(), NotesAdapter.NotesClickListener, PopupMenu.OnMenuItemClickListener
 {
-
+    private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var binding :NoteFragmentBinding
     private lateinit var database: NoteDatabase
     lateinit var viewModel: NoteViewModel
@@ -56,9 +58,11 @@ class NoteFragment: Fragment(), NotesAdapter.NotesClickListener, PopupMenu.OnMen
         inflater, R.layout.note_fragment, container, false
     )
 
+
         initUI()
 
-
+        firebaseAuth = FirebaseAuth.getInstance()
+        checkLoggedIn()
         viewModel = ViewModelProvider(this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)).get(NoteViewModel::class.java)
 
@@ -78,6 +82,10 @@ class NoteFragment: Fragment(), NotesAdapter.NotesClickListener, PopupMenu.OnMen
         return binding.root
     }
 
+    override fun onStart() {
+        super.onStart()
+        checkLoggedIn()
+    }
 
     private fun initUI() {
 
@@ -174,6 +182,13 @@ class NoteFragment: Fragment(), NotesAdapter.NotesClickListener, PopupMenu.OnMen
         } catch (ex: ActivityNotFoundException) {
             Toast.makeText(requireContext(), getString(R.string.sharing_not_available),
                 Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun checkLoggedIn(){
+        if(firebaseAuth.currentUser == null) {
+
+            view?.findNavController()?.navigate(R.id.action_noteFragment_to_loginPage)
         }
     }
 
