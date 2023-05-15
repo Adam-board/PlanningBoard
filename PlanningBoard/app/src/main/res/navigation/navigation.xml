@@ -14,15 +14,18 @@
         <action
             android:id="@+id/action_landingPage_to_noteFragment"
             app:destination="@id/noteFragment" />
+        <action
+            android:id="@+id/action_landingPage_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginPage"
         android:name="uk.ac.abertay.planningboard.loginPage"
-        android:label="loginPage" />
-    <fragment
-        android:id="@+id/signUpFragment"
-        android:name="uk.ac.abertay.planningboard.SignUpFragment"
-        android:label="SignUpFragment" />
+        android:label="loginPage" >
+        <action
+            android:id="@+id/action_loginPage_to_landingPage"
+            app:destination="@id/landingPage" />
+    </fragment>
     <fragment
         android:id="@+id/todoFragment"
         android:name="uk.ac.abertay.planningboard.TodoFragment"
@@ -39,4 +42,8 @@
         android:id="@+id/mainActivity"
         android:name="uk.ac.abertay.planningboard.MainActivity"
         android:label="MainActivity" />
+    <activity
+        android:id="@+id/signUpActivity"
+        android:name="uk.ac.abertay.planningboard.SignUpActivity"
+        android:label="SignUpActivity" />
 </navigation>

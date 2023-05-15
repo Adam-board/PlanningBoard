@@ -19,8 +19,4 @@
         android:icon="@android:drawable/ic_menu_agenda"
         android:id="@+id/todoFragment"
         android:title="@string/todo"/>
-    <item
-        android:id="@+id/Settings"
-        android:icon="@android:drawable/ic_menu_manage"
-        android:title="@string/settings" />
 </menu>

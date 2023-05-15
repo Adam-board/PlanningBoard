@@ -25,5 +25,4 @@ class TodoRepo(private val todoDao: TodoDao) {
         todoDao.update(todo.id, todo.title, todo.todo)
     }
 
-
 }

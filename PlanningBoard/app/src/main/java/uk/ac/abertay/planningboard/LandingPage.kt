@@ -8,12 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import uk.ac.abertay.planningboard.databinding.LandingFragmentBinding
 
 class LandingPage : Fragment() {
+
 
     private lateinit var viewModel: LandingViewModel
     private lateinit var binding: LandingFragmentBinding
@@ -34,6 +36,11 @@ class LandingPage : Fragment() {
         }
         binding.gotoTodo.setOnClickListener{view:View ->
         view.findNavController().navigate(R.id.action_landingPage_to_todoFragment)
+        }
+
+        binding.CalendarButton.setOnClickListener{view:View ->
+
+            view.findNavController().navigate((R.id.action_landingPage_to_calendarFragment))
         }
 
 

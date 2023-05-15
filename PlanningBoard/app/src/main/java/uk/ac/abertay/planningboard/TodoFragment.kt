@@ -54,7 +54,7 @@ class TodoFragment: Fragment(), TodoAdapter.TodoClickListener, PopupMenu.OnMenuI
         viewModel = ViewModelProvider(this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)).get(TodoViewModel::class.java)
 
-        viewModel.allnotes.observe(viewLifecycleOwner) { list ->
+        viewModel.alltodo.observe(viewLifecycleOwner) { list ->
 
             list?.let {
 

@@ -58,6 +58,7 @@ class NoteFragment: Fragment(), NotesAdapter.NotesClickListener, PopupMenu.OnMen
 
         initUI()
 
+
         viewModel = ViewModelProvider(this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)).get(NoteViewModel::class.java)
 
@@ -71,6 +72,8 @@ class NoteFragment: Fragment(), NotesAdapter.NotesClickListener, PopupMenu.OnMen
 
 
         database = NoteDatabase.getDatabase(requireContext())
+
+
 
         return binding.root
     }

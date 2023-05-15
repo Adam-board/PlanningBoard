@@ -2,14 +2,12 @@
     <string name="app_name">PlanningBoard</string>
     <string name="loadingtext">Loading...</string>
     <string name="addnew">Add New Note</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="notes">Notes</string>
     <string name="calendar">Calendar</string>
     <string name="goals">Goals</string>
     <string name="todo">Todo</string>
     <string name="weclomeText">Welcome to Planning Board!</string>
     <string name="usernameText">PlaceHolder</string>
-    <string name="inspirQuote">Loading Quote of the Day</string>
     <string name="numTodoLeft">Todo\'s To Finish</string>
     <string name="NotesCreated">Notes Created</string>
     <string name="numTodoLeftNumber">0</string>
@@ -27,7 +25,7 @@
     <string name="signUpDetails">Please add the following information below to create your account!</string>
     <string name="createAccountText">Create Account</string>
     <string name="SignupGoogle">Sign up Using Google!</string>
-    <string name="CalendarText">Please select the date you want</string>
+    <string name="CalendarText">Today\'s Date</string>
     <string name="ConfirmDate">Confirm</string>
     <string name="AddTodo">Click To Add Todo</string>
     <string name="PlanningBoardText">Planning Board</string>
@@ -49,4 +47,7 @@
     <string name="note">Note</string>
     <string name="date">Date</string>
     <string name="shareFeatureTextTodo">I\'ve sent you something that needs done with the title %1$S, Here\'s the description: %2$S</string>
+    <string name="login_with_twitter">Login With Twitter</string>
+    <string name="sign_up_using_twitter">Sign up using Twitter</string>
+    <string name="AlreadyAccountCreate">Already have an account? Login!</string>
 </resources>

@@ -12,12 +12,12 @@ class TodoViewModel(application: Application): AndroidViewModel(application) {
 
     private val repo : TodoRepo
 
-    val allnotes : LiveData<List<Todo>>
+    val alltodo : LiveData<List<Todo>>
 
     init {
         val dao = TodoDatabase.getDatabase(application).getTodoDao()
         repo = TodoRepo(dao)
-        allnotes = repo.allTodo
+        alltodo = repo.allTodo
     }
 
     fun deleteTodo(todo: Todo) = viewModelScope.launch(Dispatchers.IO) {
@@ -36,6 +36,5 @@ class TodoViewModel(application: Application): AndroidViewModel(application) {
 
         repo.update(todo)
     }
-
 
 }

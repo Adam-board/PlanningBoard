@@ -2,13 +2,23 @@ package uk.ac.abertay.planningboard
 
 
 
+import android.app.Application
 import android.util.Log
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 
-class LandingViewModel: ViewModel() {
+class LandingViewModel:ViewModel() {
+
+
+    private val _todoToFinish = MutableLiveData<Int>()
+    val todoToFinish : LiveData<Int> get() = _todoToFinish
+
+    private val _notesCreated = MutableLiveData<Int>()
+    val notesCreated : LiveData<Int> get() = _notesCreated
+
 
     //The current quote displayed on screen
     private val _quote = MutableLiveData<String>()
@@ -23,7 +33,6 @@ class LandingViewModel: ViewModel() {
         _quote.value = "Loading..."
         resetQuote()
         nextQuote()
-
     }
 
 
@@ -56,7 +65,6 @@ class LandingViewModel: ViewModel() {
         }
         _quote.value = quoteList.removeAt(0)
     }
-
 
 }
 
