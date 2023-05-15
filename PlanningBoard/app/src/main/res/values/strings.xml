@@ -50,4 +50,5 @@
     <string name="login_with_twitter">Login With Twitter</string>
     <string name="sign_up_using_twitter">Sign up using Twitter</string>
     <string name="AlreadyAccountCreate">Already have an account? Login!</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -3,6 +3,7 @@ package uk.ac.abertay.planningboard
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
@@ -35,6 +36,11 @@ class SignUpActivity : AppCompatActivity() {
 
         }
 
+
+        checkLoggedIn()
+
+
+
         binding.CreateAccount.setOnClickListener {
             val emailAddressSignup = binding.editTextEmailAddressSignUp.text.toString()
             val pass = binding.editTextPasswordSignUp.text.toString()
@@ -49,7 +55,7 @@ class SignUpActivity : AppCompatActivity() {
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
                         }else{
-
+                            Log.w("SignUpActivity", "SignupFailing")
                         }
                     }
                 }else{
@@ -64,7 +70,14 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
+private fun checkLoggedIn(){
+    if(firebaseAuth.currentUser != null) {
 
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+
+    }
+}
 
 
 }
